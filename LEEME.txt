@@ -1,0 +1,40 @@
+﻿REPORTE DE COMPATIBILIDAD (RedM Compat Rápido v1.1.0)
+=====================================================
+(English: see README.txt)
+
+Sirve para que el creador del asset vea si algún otro recurso de tu servidor choca con su asset.
+NO MODIFICA NADA DEL SERVIDOR: solo lee archivos y deja un reporte .txt. No se conecta a internet.
+No hace falta instalar nada: funciona con lo que ya trae Windows (no funciona en servidores Linux).
+
+Pasos
+-----
+1. Descomprimí esta carpeta en el servidor (por ejemplo en el Escritorio).
+2. Doble clic en "Generar reporte de compatibilidad.bat".
+   (Si Windows muestra un aviso azul, tocá "Más información" y después "Ejecutar de todas formas".)
+3. Arriba elegí el idioma del reporte (Español / English).
+4. En la ventana elegí:
+     1) la carpeta del asset (la del recurso que te pasó el creador),
+     2) la carpeta "resources" del servidor,
+     3) los archivos .cfg del servidor: server.cfg y, si tus recursos están en otro archivo
+        (por ejemplo resources.cfg), elegilo también (se pueden elegir varios con Ctrl).
+        Si dejás este campo vacío, busca server.cfg solo.
+5. Tocá "Generar reporte". Tarda unos segundos.
+6. Se abre la carpeta "reportes" con el archivo compat_<asset>_<fecha>_<hora>.txt.
+   Mandale ese archivo al creador del asset.
+
+Qué dice el reporte
+-------------------
+- Si hay o no problemas de compatibilidad.
+- La lista de recursos que chocan con el asset (los que el creador te va a pedir para hacer la compatibilidad).
+- El detalle de cada archivo que choca, cuál se carga y cuál no.
+- Avisos útiles: recursos que no están en los .cfg, recursos con el mismo nombre en dos carpetas,
+  nombres de archivo con hash mal armados.
+
+AVISO
+-----
+Esta herramienta solo LEE archivos: no modifica, borra ni mueve nada del servidor, no se conecta a internet y
+no envía datos. Se entrega "tal cual", sin garantías de ningún tipo. El reporte es informativo, se basa en los
+nombres de archivo y en los .cfg elegidos, y puede no detectar todos los problemas (por ejemplo, conflictos
+dentro de archivos cifrados o de scripts). Quien la ejecuta lo hace bajo su propia responsabilidad; el autor no
+se hace responsable por daños, pérdidas ni decisiones tomadas a partir del reporte. Antes de cambiar algo en el
+servidor, hacé una copia de seguridad. Usá solo la versión que te pasó el creador del asset por su canal oficial.
